@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+
+html { }
+body { margin: 0px; font-size: 0px;}
+body, input { font-family: "Roboto";}
+h1, h2, h3, h4, h5, h6 { margin: 0px; font-weight: normal;}
+p { margin: 0px;}
+ul { padding: 0px;}
+
+#main_div { display: block; vertical-align: top; box-sizing: border-box; width: 300px; margin: 16px; padding: 8px; background-color: #eee; box-shadow: 0px 0px 2px #777;}
+	#main_div input { display: inline-block; vertical-align: top; box-sizing: border-box; width: calc(50% - 4px); height: 32px; margin-right: 4px; padding: 0px 8px; border: 1px solid #ccc;}
+	#main_div select { display: inline-block; vertical-align: top; box-sizing: border-box; width: calc(50% - 4px); height: 32px; margin-left: 4px; padding: 0px 8px; border: 1px solid #ccc;}
+	#main_div div { display: block; margin-top: 8px; border-top: 1px solid #ddd;}
+		#main_div div article{ display: block; margin-top: 8px;}
+		#main_div div p { display: inline-block; vertical-align: top; box-sizing: border-box; height: 32px; line-height: 32px;}
+		#main_div div p.pokemon_id { width: 16%; font-size: 12px; color: #777;}
+		#main_div div p.pokemon_name { width: 60%; font-weight: 500; font-size: 14px;}
+		#main_div div p.pokemon_lvl { width: 24%; font-size: 14px;}

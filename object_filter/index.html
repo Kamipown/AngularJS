@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Object FIlter</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+	</head>
+	<body ng-app>
+
+		<div id="main_div">
+			<input type="text" placeholder="name" ng-model="query"/>
+
+			<select ng-model="order">
+				<option value="id" selected="selected">Order by id</option>
+				<option value="name">Order by name</option>
+				<option value="lvl">Order by level</option>
+			</select>
+
+			<div ng-init="pokemons=[{id:'4', name:'Charmander', lvl:'5'}, {id:'5', name:'Charmeleon', lvl:'16'}, {id:'6', name:'Charizard', lvl:'36'}]">
+				<article ng-repeat="pokemon in pokemons | filter:query | orderBy:order">
+					<p class="pokemon_id">Id. {{pokemon.id}}</p>
+					<p class="pokemon_name">{{pokemon.name}}</p>
+					<p class="pokemon_lvl">Lv. {{pokemon.lvl}}</p>
+				</article>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	</body>
+</html>
