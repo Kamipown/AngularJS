@@ -1,0 +1,17 @@
+<div class="pokemons_div">
+	<input type="text" placeholder="name" ng-model="query"/>
+
+	<select ng-model="order">
+		<option value="id" selected="selected">Order by id</option>
+		<option value="name">Order by name</option>
+		<option value="lvl">Order by level</option>
+	</select>
+
+	<div>
+		<article ng-repeat="pokemon in pokemons | filter:query | orderBy:order">
+			<p class="pokemon_id">Id. {{pokemon.id}}</p>
+			<p class="pokemon_name">{{pokemon.name}}</p>
+			<p class="pokemon_lvl">Lv. {{pokemon.lvl}}</p>
+		</article>
+	</div>
+</div>
